@@ -96,7 +96,7 @@ class Reminder(BotPlugin):
 
     @staticmethod
     def get_openai_message(meeting_type, zoom_link, time_until_meeting):
-        character = ["Marvin from Hitchhiker's Guide To The Galaxy."]
+        character = ["Marvin from Hitchhiker's Guide To The Galaxy.,"A Super buff dude that speaks mandarin and is invisible. He really loves bing chilling"]
         client = OpenAI(timeout=httpx.Timeout(15.0, read=5.0, write=10.0, connect=3.0), api_key=os.environ.get("OPENAI_API_KEY"),)
         prompt = (
             f"You are a chatbot that announces the next meeting."
